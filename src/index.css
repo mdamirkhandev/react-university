@@ -46,7 +46,7 @@ nav ul li {
     bottom: 0;
     background: #212ea0;
     z-index: -1;
-    width: 200px;
+    width: 205px;
     padding-top: 70px;
     transition: 0.5s;
   }
@@ -60,7 +60,7 @@ nav ul li {
     cursor: pointer;
   }
   .hide-mobile-menu {
-    right: -200px;
+    right: -205px;
   }
 }
 .hero {

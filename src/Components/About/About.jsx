@@ -7,7 +7,7 @@ const About = () => {
         <img src={about_img} alt="" className="about-img" />
         <img src={play_icon} alt="" className="play-icon" />
       </div>
-      <div className="about-right">
+      <div className="about-right" id="about">
         <h3>ABOUT UNIVERSITY</h3>
         <h2>Nurturing Tomorrow's Leaders Today</h2>
         <p>

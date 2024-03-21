@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import logo from "../../assets/logo.png";
+import menu_icon from "../../assets/menu-icon.png";
 import "./Navbar.css";
+import { Link } from "react-scroll";
 const Navbar = () => {
   const [sticky, setSticky] = useState(false);
   useEffect(() => {
@@ -8,29 +10,52 @@ const Navbar = () => {
       window.scrollY > 50 ? setSticky(true) : setSticky(false);
     });
   }, []);
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const toggleMenu = () => {
+    mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
+  };
   return (
     <nav className={`container ${sticky ? "dark-nav" : ""}`}>
       <img src={logo} alt="" className="logo" />
-      <ul id="nav-mobile" className="right hide-on-med-and-down">
+      <ul className={mobileMenu ? "" : "hide-mobile-menu"}>
         <li>
-          <a href="sass.html">Home</a>
+          <Link to="hero" offset={0} duration={500} smooth={true}>
+            Home
+          </Link>
         </li>
         <li>
-          <a href="badges.html">Program</a>
+          <Link to="programs" offset={-260} duration={500} smooth={true}>
+            Programs
+          </Link>
         </li>
         <li>
-          <a href="collapsible.html">About Us</a>
+          <Link to="about" offset={-150} duration={500} smooth={true}>
+            About Us
+          </Link>
         </li>
         <li>
-          <a href="collapsible.html">Campus</a>
+          <Link to="campus" offset={-260} duration={500} smooth={true}>
+            Campus
+          </Link>
         </li>
         <li>
-          <a href="collapsible.html">Testimonials</a>
+          <Link to="testimonials" offset={-260} duration={500} smooth={true}>
+            Testimonials
+          </Link>
         </li>
         <li>
-          <button className="btn">Contacts</button>
+          <Link
+            to="contact"
+            offset={-260}
+            duration={500}
+            smooth={true}
+            className="btn"
+          >
+            Contact Us
+          </Link>
         </li>
       </ul>
+      <img src={menu_icon} alt="" className="menu-icon" onClick={toggleMenu} />
     </nav>
   );
 };

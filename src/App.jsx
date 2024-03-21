@@ -1,9 +1,10 @@
 import About from "./Components/About/About";
 import Campus from "./Components/Campus/Campus";
+import Footer from "./Components/Footer/Footer";
 import Hero from "./Components/Hero/Hero";
 import Navbar from "./Components/Navbar/Navbar";
 import Programs from "./Components/Programs/Programs";
-import Contacts from "./Components/Testimonials/Contacts/Contacts";
+import Contacts from "./Components/Contacts/Contacts";
 import Testimonials from "./Components/Testimonials/Testimonials";
 import Title from "./Components/Title/Title";
 
@@ -22,6 +23,7 @@ const App = () => {
         <Testimonials />
         <Title title="Get in Touch" subtitle="CONTACT US" />
         <Contacts />
+        <Footer />
       </div>
     </div>
   );
